@@ -1,4 +1,4 @@
-import { Server } from '../classes/serverBuilder.js';
+import { Server } from './serverBuilder';
 
 export default class Database {
     [x: string]: any;

@@ -1,6 +1,6 @@
 import * as Minecraft from 'mojang-minecraft';
 import { Server } from './serverBuilder.js';
-import { dimension } from '../../@types/index';
+import { dimension } from '../../@types';
 import { getEntityAtPosReturn } from '../../@types/build/classes/EntityBuilder';
 
 export class EntityBuilder {
@@ -63,5 +63,5 @@ export class EntityBuilder {
         if(data.error) return;
         return parseInt(data.statusMessage.match(/-?\d+/)[0]);
     };
-};
+}
 export const Entity = new EntityBuilder();

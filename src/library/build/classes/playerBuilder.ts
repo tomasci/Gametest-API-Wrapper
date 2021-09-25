@@ -1,6 +1,6 @@
 import * as Minecraft from 'mojang-minecraft';
 import { Server } from './serverBuilder.js';
-import { dimension } from '../../@types/index';
+import { dimension } from '../../@types';
 import { getPlayerAtPosReturn, getItemCountReturn } from '../../@types/build/classes/PlayerBuilder.js';
 
 export class PlayerBuilder {
@@ -101,5 +101,5 @@ export class PlayerBuilder {
         if(data.error) return;
         return parseInt(data.statusMessage.match(/-?\d+/)[0]);
     };
-};
+}
 export const Player = new PlayerBuilder();

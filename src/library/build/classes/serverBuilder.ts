@@ -1,6 +1,6 @@
 import { Commands, World } from 'mojang-minecraft';
 import { EventEmitter } from './eventEmitter.js';
-import { dimension } from '../../@types/index';
+import { dimension } from '../../@types';
 import { runCommandReturn } from '../../@types/build/classes/ServerBuilder';
 
 export class ServerBuilder extends EventEmitter {
@@ -59,5 +59,5 @@ export class ServerBuilder extends EventEmitter {
         });
         return { error: error };
     };
-};
+}
 export const Server = new ServerBuilder();

@@ -18,8 +18,8 @@ export class CommandBuilder {
      */
     register(register: registerInformation, callback: (data: BeforeChatEvent, args: Array<string>) => void): void {
         this._registrationInformation.push({
-            private: register.private ? true : false,
-            cancelMessage: register.cancelMessage ? true : false,
+            private: register.private, // param is already boolean
+            cancelMessage: register.cancelMessage, // param is already boolean
             name: register.name.toLowerCase(),
             aliases: register.aliases ? register.aliases.map(v => v.toLowerCase()) : null,
             description: register.description,
@@ -67,5 +67,5 @@ export class CommandBuilder {
         });
         return register;
     };
-};
+}
 export const Command = new CommandBuilder();
